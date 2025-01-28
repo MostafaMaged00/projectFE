@@ -6,3 +6,13 @@ display: flex;
 flex-wrap: wrap;
 
 }
+
+.Bottom-line{
+    
+    border-bottom: 1px solid lightgray;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 5px rgb(204, 193, 193);
+
+
+}
