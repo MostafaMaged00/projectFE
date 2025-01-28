@@ -20,10 +20,10 @@ function App() {
         }
 
         // Parse the JSON response
-        const data = await response.json();
+        const bookData = await response.json();
 
         // Set users data into state
-        setBook(data);
+        setBook(bookData);
       } catch (error) {
         //
         console.log(error);
@@ -36,16 +36,20 @@ function App() {
 
   return (
     <>
-      <ul>
+    <div className="App">
+      <h1>Books</h1>
+      <div className="book-container">
+     
         {books.map((book) => (
-          <li key={book.id}>
-            <h2>{book.name}</h2>
-            <p>Email: {book.email}</p>
-            <p>Username: {book.username}</p>
-          </li>
+        
+           
+            <Book title={book.name} desc={book.username} pages={book.id}/>
+      
         ))}
-      </ul>
-      <Book/>
+  
+   
+      </div>
+      </div>
     </>
   );
 }
