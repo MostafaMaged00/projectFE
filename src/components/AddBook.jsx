@@ -35,7 +35,7 @@ function AddBook() {
 
   return (
     <div className="container mt-4">
-        <h2 className="mb-4">Add New Book</h2>
+        <h2 className="mb-4" style={{ color: '#3ca3e7'}}>Add New Book</h2>
         <form onSubmit={handleSubmit}>
         <div className="mb-3">
             <label htmlFor="title" className="form-label">Title</label>
@@ -50,9 +50,8 @@ function AddBook() {
             <label htmlFor="pages" className="form-label">Pages</label>
             <input type="number" id="pages" name="pages" placeholder="Enter book pages number" className="form-control" required value={pages} onChange={e=>{setPage(e.target.value)}}/>
             <br />
-            <button className="btn btn-primary">Save</button>
-            <br />
-            <Link to="/">Home</Link>
+            <button className="btn btn-primary">Save</button><span>  </span>
+            <Link to="/"  className="btn btn-success">Back</Link>
             </div>
         </form>
     </div>

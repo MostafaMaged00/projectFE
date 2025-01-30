@@ -3,6 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+.book-container{
+  
+  display: flex;    
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%px;
+  
+  
+  }
 .book-card{
   border:1px solid lightgray;
   border-radius: 1px;
@@ -11,7 +21,7 @@
   margin: 10px;
   text-align: center;
   width:300px;
-  height: 400px;
+  height: 375px;
   display: inline-block;
   transition: transform 0.3s ease-in;
  
@@ -60,7 +70,7 @@
   margin: 10px 15px 15px 0px;
 }
 
-/* Hover effect */
+
 .delete-btn:hover {
   background-color: #c0392b;  
   transform: scale(1.05);      
@@ -79,7 +89,7 @@
   margin: 10px 5px 5px 5px;
 }
 
-/* Hover effect */
+
 .edit-btn:hover {
   background-color: #3ca3e7;  
   transform: scale(1.05);      
@@ -110,21 +120,19 @@
   text-align: Left;
   width:300px;
   height: 400px;
-  display: block;
-}
-
-.Footer{
-  margin: 10px;
-  
-  background-color: rgb(63, 125, 241);
-  color:#fff;
-  height: 50px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 18px;
-  padding: 0px;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.book-details-container h1{
+  color: #3ca3e7;
+  border-bottom: 1px solid #c0392b;
+}
+.book-details-footer{
+  
+  display: block;
+  margin: auto;
+
 }
 
 /* Navbar styles*/
@@ -143,7 +151,7 @@
 
 }
 .logo{
-  font-size: 32px;
+  font-size: 16px;
   color: #fff;
   font-weight: 700;
 }
@@ -162,7 +170,7 @@
   padding: 0.25rem;
   position: relative;
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #fff;
   
 }
@@ -178,47 +186,40 @@
 }
 
 
-
+/* About page CSS */
 .about-container {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  border:1px solid lightgray;
+  border-radius: 1px;
+  box-shadow: 5px 5px 5px rgb(204, 193, 193);
 }
-.about-content {
-  margin-top: 20px;
-}
-.about-content h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-.about-content h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-.image-container {
+.aboutcontent {
   margin-top: 20px;
 }
 
-/* Styling for the image */
-.image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.aboutcontent h1,h3 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color:#3ca3e7;
 }
-.about-content p {
+
+
+.aboutcontent p {
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 20px;
 }
-.about-content ul {
+.aboutcontent ul {
   list-style-type: none;
   padding-left: 0;
   font-size: 1.1em;
   line-height: 1.6;
 }
 
-.about-content li {
+.aboutcontent li {
   margin-bottom: 10px;
 }

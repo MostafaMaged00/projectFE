@@ -15,6 +15,7 @@ function ViewBook() {
 
 
   return (
+
     <div className="book-details-container">
         <h1>Book Details</h1>
         {bookData && <div className='details'>
@@ -23,9 +24,14 @@ function ViewBook() {
             <p><strong>Genre: </strong>{bookData.genre}</p>
             <p><strong>Pages: </strong>{bookData.pages}</p>
         </div>}
-
-        <Link to="/" id="btn-info" className="btn btn-info">Back</Link>
+          <div className="book-details-footer">
+          <Link to="/"  className="btn btn-success">Back</Link>
+          </div>
+        
     </div>
+     
+    
+     
   )
 }
 

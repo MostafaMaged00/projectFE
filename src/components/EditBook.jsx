@@ -46,7 +46,7 @@ const handleSubmit = (e) => {
 }
   return (
     <div className="container mt-4">
-    <h2 className="mb-4">Edit Book Details</h2>
+    <h2 className="mb-4" style={{ color: '#3ca3e7'}}>Edit Book Details</h2>
     <form onSubmit={handleSubmit}>
     <div className="mb-3">
 
@@ -62,8 +62,9 @@ const handleSubmit = (e) => {
         <label htmlFor="pages" className="form-label">Pages</label>
         <input type="number" id="pages" name="pages" placeholder="Enter book pages number" className="form-control" required value={pages} onChange={e=>{setPage(e.target.value)}}/>
         <br />
-        <button className="edit-btn">Update</button>
-        <Link to="/"  className="back-btn">Back</Link>
+
+        <button className="btn btn-primary">Update</button><span>  </span>
+            <Link to="/"  className="btn btn-success">Back</Link>
         </div>
     </form>
 </div>

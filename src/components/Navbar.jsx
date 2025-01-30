@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom"
 
 function Navbar() {
   return (
     
     <div className="nav">
-      <a href="/" className="logo">Bookz</a>
+      <a href="/" className="logo" >Bookz</a>
      
         <ul>
         

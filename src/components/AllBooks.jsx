@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 
 import Book from "./Book";
 
@@ -38,7 +38,7 @@ function AllBooks() {
       
         return (
           <>
-          <div className="App">
+         
                 <div className="book-container">
             
                 {books.map((book) => (
@@ -53,14 +53,10 @@ function AllBooks() {
 
                 />
              
-            ))}
-            
+            ))}            
            
-                           
-
                 </div>
-               
-            </div>
+
            
           </>
         );
