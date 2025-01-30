@@ -12,11 +12,11 @@ function AddBook() {
   const[pages,setPage] = useState("") //get pages
   const navigate = useNavigate() // use navigate
 
-  //create 
+  //create function to add book on submit form
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const bookData = {id,title,author,genre,pages}; //create a book pbject to store data 
+    const bookData = {id,title,author,genre,pages}; //create a book object to store data 
     
     fetch("http://localhost:3000/api/book",{
       method: 'POST',

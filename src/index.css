@@ -50,13 +50,13 @@
 .delete-btn {
   background-color: #e74c3c;  
   color: white;              
-  padding: 5px 10px;       
+  padding: 5px 5px;       
   border: none;               
   border-radius: 5px;      
   cursor: pointer;           
   font-size: 16px;            
   transition: background-color 0.3s, transform 0.2s; 
-  width: 75px;  
+  width: 60px;  
   margin: 10px 15px 15px 0px;
 }
 
@@ -67,19 +67,48 @@
 }
 .edit-btn {
   background-color: #3ca3e7;  
-  color: white;               
-  padding: 5px 10px;        
+  color: white;    
+  text-align: center;           
+  padding: 5px 5px;        
   border: none;               
   border-radius: 5px;         
   cursor: pointer;           
   font-size: 16px;        
   transition: background-color 0.3s, transform 0.2s;
-  width: 75px;    
-  margin: 10px 5px 5px 20px;
+  width: 60px;    
+  margin: 10px 5px 5px 5px;
 }
 
 /* Hover effect */
 .edit-btn:hover {
   background-color: #3ca3e7;  
   transform: scale(1.05);      
+}
+
+.back-btn {
+  background-color: #62c767;  
+  color: white;    
+  text-align: center;           
+  padding: 5px 5px;        
+  border: none;               
+  border-radius: 5px;         
+  cursor: pointer;           
+  font-size: 16px;        
+  min-width: 60px;    
+  margin: 10px 5px 5px 5px;
+  text-decoration: none;
+
+}
+
+/* View Book Details */
+.book-details-container{
+  border:1px solid lightgray;
+  border-radius: 1px;
+  box-shadow: 5px 5px 5px rgb(204, 193, 193);
+  padding: 20px;
+  margin: auto;
+  text-align: Left;
+  width:300px;
+  height: 400px;
+  display: block;
 }

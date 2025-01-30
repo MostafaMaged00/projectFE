@@ -12,7 +12,7 @@ function AllBooks() {
             try {
               // Fetch data from the API
               const response = await fetch(
-               // "https://jsonplaceholder.typicode.com/users"
+              
                 "http://localhost:3000/api/book"
               );
       
@@ -40,18 +40,15 @@ function AllBooks() {
           <>
           <div className="App">
             <Link to="/book/addbook" className="btn btn-add">Add </Link>
-            <Link to="/book/editbook" className="btn btn-add">Edit </Link>
-            <Link to="/book/deletebook" className="btn btn-add">Delete</Link>
                 <div className="book-container">
             
                 {books.map((book) => (
                 <Book 
-                    key={book.id} 
+                    key={book._id} 
 
                     title={book.title} 
                     author={book.author} 
                     pages={book.pages} 
-                    id={book.id} 
                     _id={book._id}
 
                 />

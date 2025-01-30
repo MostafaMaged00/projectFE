@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllBooks from "./components/AllBooks";
 import AddBook from "./components/AddBook";
 import EditBook from "./components/EditBook";
+import ViewBook from "./components/ViewBook";
 
 import "./App.css";
 import Footer from "./components/Footer";
@@ -19,6 +20,7 @@ function App() {
       <Route path="/" element={<AllBooks/>}></Route>
       <Route path="/book/addbook" element={<AddBook/>}></Route>
       <Route path="/book/editbook/:id" element={<EditBook/>}></Route>
+      <Route path="/book/viewbook/:id" element={<ViewBook/>}></Route>
     </Routes>
     </BrowserRouter>
     <Footer/> 

@@ -4,22 +4,31 @@ import {  useNavigate } from "react-router-dom"
 
 function Book(props) {
 
+  // use a navigate hook
   const navigate = useNavigate()
-  // create function to edit a book
-  const EditDetails=(id)=>{
-    navigate("/book/editbook/"+id)
+
+
+  // function to display book details
+  const ViewDetails=(_id)=>{
+    navigate(`/book/viewbook/${_id}`)
+    //console.log(id)
+  }
+  // function  to edit a book details
+  const EditDetails=(_id)=>{
+    navigate(`/book/editbook/${_id}`)
+  
   }
 
-
   //create a function to delete a book
-  const handleDelete = (_id) => {
+  const RemoveBook = (_id) => {
+    //if(window.confirm("Are you sure you want to remove a book!")){}
     fetch(`http://localhost:3000/api/book/${_id}`, {
       method: 'DELETE',
     })
       .then(response => response.json())
       .then(()=>{
         //alert("New book Added Successfully");
-        navigate("/")
+        window.location.reload();
       })
       .catch(err => console.log(err))
       
@@ -32,10 +41,9 @@ function Book(props) {
       <img className="book-card-img" src="https://i.ebayimg.com/images/g/VnYAAOSw3JBf~vTx/s-l960.webp" alt="book title" />
       <h6 className="book-card-title">{props.title}</h6>
       <p className="book-card-desc">Author: {props.author}</p>
-      <p className="book-card-desc">Pages:{props.pages}</p>
-      <button className="edit-btn"onClick={()=>{EditDetails(props.id)}}>Edit</button>
-      <span></span>
-      <button className="delete-btn"onClick={()=>{handleDelete(props._id)}}>Delete</button>
+      <button className="edit-btn" onClick={()=>{ViewDetails(props._id)}}>View</button>
+      <button className="edit-btn" onClick={()=>{EditDetails(props._id)}}>Edit</button>
+      <button className="delete-btn"onClick={()=>{RemoveBook(props._id)}}>Delete</button>
       
       
       
