@@ -21,7 +21,7 @@ function Book(props) {
 
   //create a function to delete a book
   const RemoveBook = (_id) => {
-    //if(window.confirm("Are you sure you want to remove a book!")){}
+    if(window.confirm("Are you sure you want to remove a book!")){
     fetch(`http://localhost:3000/api/book/${_id}`, {
       method: 'DELETE',
     })
@@ -31,6 +31,7 @@ function Book(props) {
         window.location.reload();
       })
       .catch(err => console.log(err))
+    }
       
   };
 
@@ -38,7 +39,7 @@ function Book(props) {
   return (
     <div className="book-card">
      
-      <img className="book-card-img" src="https://i.ebayimg.com/images/g/VnYAAOSw3JBf~vTx/s-l960.webp" alt="book title" />
+      <img className="book-card-img" src={props.image} alt="book cover image" />
       <h6 className="book-card-title">{props.title}</h6>
       <p className="book-card-desc">Author: {props.author}</p>
       <button className="edit-btn" onClick={()=>{ViewDetails(props._id)}}>View</button>
@@ -50,12 +51,23 @@ function Book(props) {
     </div>
   )
 }
+
+// PropTypes to validate props
 Book.protoTypes = {
   title:PropTypes.string,
-  desc: PropTypes.string,
+  author: PropTypes.string,
   pages: PropTypes.number,
+  image: PropTypes.string,
 
 }
+//use default value in case unknow data 
+Book.defaultProps = {
+  title:'Anonymous',
+  author: 'Unknown',
+  pages: 0,
+  image: 'https://m.media-amazon.com/images/I/21TsZ14+iBL._AC_UF1000,1000_QL80_.jpg',
+  
+};
 
 
 

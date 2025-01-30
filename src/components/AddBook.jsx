@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 
 
 function AddBook() {
-  const [id,setId] = useState("") //get id 
+  //const [id,setId] = useState("") //get id 
   const[title,setTitle] = useState("") //get title
   const[author,setAuthor] = useState("") //get author
   const[genre,setGenre] = useState("") //get genre
@@ -16,7 +16,7 @@ function AddBook() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const bookData = {id,title,author,genre,pages}; //create a book object to store data 
+    const bookData = {title,author,genre,pages}; //create a book object to store data 
     
     fetch("http://localhost:3000/api/book",{
       method: 'POST',
@@ -38,9 +38,6 @@ function AddBook() {
         <h2 className="mb-4">Add New Book</h2>
         <form onSubmit={handleSubmit}>
         <div className="mb-3">
-            <label htmlFor="id" className="form-label">ID</label>
-            <input type="text" id="id" name="id"   className="form-control" required value={id} onChange={e=>{setId(e.target.value)}}/>
-
             <label htmlFor="title" className="form-label">Title</label>
             <input type="text" id="title" name="title" placeholder="Enter book title" className="form-control" required value={title} onChange={e=>{setTitle(e.target.value)}}/>
 

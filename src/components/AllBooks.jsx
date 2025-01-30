@@ -39,7 +39,6 @@ function AllBooks() {
         return (
           <>
           <div className="App">
-            <Link to="/book/addbook" className="btn btn-add">Add </Link>
                 <div className="book-container">
             
                 {books.map((book) => (
@@ -49,6 +48,7 @@ function AllBooks() {
                     title={book.title} 
                     author={book.author} 
                     pages={book.pages} 
+                    image={book.image} 
                     _id={book._id}
 
                 />
