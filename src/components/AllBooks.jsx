@@ -39,29 +39,32 @@ function AllBooks() {
         return (
           <>
           <div className="App">
-            <h1>My Books</h1>
             <Link to="/book/addbook" className="btn btn-add">Add </Link>
             <Link to="/book/editbook" className="btn btn-add">Edit </Link>
             <Link to="/book/deletebook" className="btn btn-add">Delete</Link>
-            <div className="Bottom-line"></div>
                 <div className="book-container">
             
                 {books.map((book) => (
                 <Book 
                     key={book.id} 
+
                     title={book.title} 
-                    desc={book.author} 
-                    pages={book.id} 
+                    author={book.author} 
+                    pages={book.pages} 
+                    id={book.id} 
+                    _id={book._id}
+
                 />
+             
             ))}
-         
+            
            
                            
 
                 </div>
                
             </div>
-            <button type="button" className="btn btn-primary">save</button>
+           
           </>
         );
       }
