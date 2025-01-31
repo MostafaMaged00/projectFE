@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<AllBooks/>}></Route>
-      <Route path="/book/addbook" element={<AddBook/>}></Route>
+      <Route path="/" element={<AddBook/>}></Route>
       <Route path="/book/editbook/:id" element={<EditBook/>}></Route>
       <Route path="/book/viewbook/:id" element={<ViewBook/>}></Route>
       <Route path="/about" element={<About/>}></Route>
