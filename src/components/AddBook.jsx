@@ -19,7 +19,7 @@ function AddBook() {
     const bookData = {title,author,genre,pages}; //create a book object to store data 
     
     //fetch("http://localhost:3000/api/book",{
-    fetch("https://projectbe-a78m.onrender.com/api/book",{
+    fetch("https://projectbe-a78m.onrender.com/api/book/",{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
