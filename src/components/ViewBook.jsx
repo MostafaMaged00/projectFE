@@ -6,7 +6,8 @@ function ViewBook() {
     const {id} = useParams();
     const [bookData,setBookData] = useState({})
     useEffect(()=>{
-        fetch(`http://localhost:3000/api/book/${id}`)
+        //fetch(`http://localhost:3000/api/book/${id}`)
+        fetch(`https://projectbe-a78m.onrender.com/api/book/${id}`)
         .then((res)=>res.json())
         .then((data)=>setBookData(data))
         .catch((err)=>console.log(err.message))

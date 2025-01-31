@@ -146,8 +146,10 @@
 }
 
 .details-left img {
+
   max-width: 100%; /* Ensures the image scales responsively */
   height: auto; /* Keeps the aspect ratio of the image intact */
+  object-fit: cover;
 }
 
 .details-right {

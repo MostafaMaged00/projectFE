@@ -22,7 +22,8 @@ function Book(props) {
   //create a function to delete a book
   const RemoveBook = (_id) => {
     if(window.confirm("Are you sure you want to remove a book!")){
-    fetch(`http://localhost:3000/api/book/${_id}`, {
+   // fetch(`http://localhost:3000/api/book/${_id}`, {
+    fetch(`https://projectbe-a78m.onrender.com/api/book${_id}`, {
       method: 'DELETE',
     })
       .then(response => response.json())
