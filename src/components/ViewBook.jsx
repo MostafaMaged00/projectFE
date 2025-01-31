@@ -18,15 +18,30 @@ function ViewBook() {
 
     <div className="book-details-container">
         <h1>Book Details</h1>
-        {bookData && <div className='details'>
+
+
+
+        <div className="details-container">
+  <div className="details-left">
+    <img src={bookData.image} alt="Image Description" />
+  </div>
+    {bookData && <div className="details-right">
+           
+           
             <p><strong>Title: </strong>{bookData.title}</p>
             <p><strong>Author: </strong>{bookData.author}</p>
             <p><strong>Genre: </strong>{bookData.genre}</p>
             <p><strong>Pages: </strong>{bookData.pages}</p>
+            
+
         </div>}
-          <div className="book-details-footer">
-          <Link to="/"  className="btn btn-success">Back</Link>
+</div>
+
+
+<div className="book-details-footer">
+          <Link to="/"  className="btn btn-success" >Back</Link>
           </div>
+        
         
     </div>
      

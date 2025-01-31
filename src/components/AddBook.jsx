@@ -50,8 +50,8 @@ function AddBook() {
             <label htmlFor="pages" className="form-label">Pages</label>
             <input type="number" id="pages" name="pages" placeholder="Enter book pages number" className="form-control" required value={pages} onChange={e=>{setPage(e.target.value)}}/>
             <br />
-            <button className="btn btn-primary">Save</button><span>  </span>
-            <Link to="/"  className="btn btn-success">Back</Link>
+            <button className="btn btn-primary" style={{ backgroundColor: '#3ca3e7'}}>Save</button><span>  </span>
+            <Link to="/"  className="btn btn-success" >Back</Link>
             </div>
         </form>
     </div>

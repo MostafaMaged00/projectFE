@@ -63,7 +63,7 @@ const handleSubmit = (e) => {
         <input type="number" id="pages" name="pages" placeholder="Enter book pages number" className="form-control" required value={pages} onChange={e=>{setPage(e.target.value)}}/>
         <br />
 
-        <button className="btn btn-primary">Update</button><span>  </span>
+        <button className="btn btn-primary" style={{ backgroundColor: '#3ca3e7'}}>Update</button><span>  </span>
             <Link to="/"  className="btn btn-success">Back</Link>
         </div>
     </form>

@@ -3,7 +3,7 @@ function Navbar() {
   return (
     
     <div className="nav">
-      <a href="/" className="logo" >Bookz</a>
+      <a href="/" className="logo" >BOOKZ</a>
      
         <ul>
         

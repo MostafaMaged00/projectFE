@@ -110,7 +110,7 @@
 
 }
 
-/* View Book Details */
+/* View BookDetails Page */
 .book-details-container{
   border:1px solid lightgray;
   border-radius: 1px;
@@ -118,7 +118,7 @@
   padding: 20px;
   margin: auto;
   text-align: Left;
-  width:300px;
+  width:600px;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -134,6 +134,29 @@
   margin: auto;
 
 }
+.details-container {
+  display: flex; /* Use flexbox to align the two divs side by side */
+  justify-content: space-between; /* Optional: Adds space between left and right divs */
+  align-items: center; /* Vertically centers the content */
+}
+
+.details-left{
+  width: 300px;
+  flex: 1; /* Takes up equal space */
+}
+
+.details-left img {
+  max-width: 100%; /* Ensures the image scales responsively */
+  height: auto; /* Keeps the aspect ratio of the image intact */
+}
+
+.details-right {
+  flex: 2; /* Takes up more space than the left side */
+  padding-left: 20px; /* Adds some space between the image and text */
+}
+
+
+
 
 /* Navbar styles*/
 .nav{
