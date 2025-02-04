@@ -11,8 +11,8 @@ function EditBook() {
   const navigate = useNavigate() // use navigate
   //const [bookData,setBookData] = useState({})
   useEffect(()=>{
-     // fetch(`http://localhost:3000/api/book/${id}`)
-      fetch(`https://projectbe-a78m.onrender.com/api/book/${id}`)
+     fetch(`http://localhost:3000/api/book/${id}`)
+      //fetch(`https://projectbe-a78m.onrender.com/api/book/${id}`)
       .then((res)=>res.json())
       .then((data)=>{
        setTitle(data.title);
@@ -31,8 +31,8 @@ const handleSubmit = (e) => {
   
   const bookData = {title,author,genre,pages}; //Edit  a book pbject to store data 
   
- // fetch(`http://localhost:3000/api/book/${id}`,{
-  fetch(`https://projectbe-a78m.onrender.com/api/book/${id}`,{
+  fetch(`http://localhost:3000/api/book/${id}`,{
+ // fetch(`https://projectbe-a78m.onrender.com/api/book/${id}`,{
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
